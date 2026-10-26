@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الصور بأبعادها الأصلية</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-box {
+            flex: 1 1 45%;
+            max-width: 45%;
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .dimensions {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .image-box {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>الصورتين بأبعادهما الأصلية</h1>
+
+    <div class="gallery">
+  
+
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="IMG_8415 (1).webp" alt="الصورة 2" loading="async" onload="showDimensions(this, 'width2', 'height2')">
+            <div class="dimensions">
+                العرض: <span id="width2">جاري التحميل...</span> 
+                الارتفاع: <span id="height2">جاري التحميل...</span>
+            </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="IMG_8415 (1).webp" alt="الصورة 2" loading="async" onload="showDimensions(this, 'width2', 'height2')">
+            <div class="dimensions">
+                العرض: <span id="width2">جاري التحميل...</span> 
+                الارتفاع: <span id="height2">جاري التحميل...</span>
+            </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="IMG_8415 (1).webp" alt="الصورة 2" loading="async" onload="showDimensions(this, 'width2', 'height2')">
+            <div class="dimensions">
+                العرض: <span id="width2">جاري التحميل...</span> 
+                الارتفاع: <span id="height2">جاري التحميل...</span>
+            </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="IMG_8415 (1).webp" alt="الصورة 2" loading="async" onload="showDimensions(this, 'width2', 'height2')">
+            <div class="dimensions">
+                العرض: <span id="width2">جاري التحميل...</span> 
+                الارتفاع: <span id="height2">جاري التحميل...</span>
+            </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="IMG_8415 (1).webp" alt="الصورة 2" loading="async" onload="showDimensions(this, 'width2', 'height2')">
+            <div class="dimensions">
+                العرض: <span id="width2">جاري التحميل...</span> 
+                الارتفاع: <span id="height2">جاري التحميل...</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDimensions(img, widthId, heightId) {
+            const width = img.naturalWidth;
+            const height = img.naturalHeight;
+            document.getElementById(widthId).textContent = width + ' بكسل';
+            document.getElementById(heightId).textContent = height + ' بكسل';
+        }
+    </script>
+
+</body>
+</html>
